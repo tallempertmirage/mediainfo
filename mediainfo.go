@@ -112,7 +112,7 @@ func (info MediaInfo) IsMedia() bool {
 	return info.Video[0].Duration != "" && info.Audio[0].Duration != ""
 }
 
-func GetMediaInfo(fname string) (MediaInfo, error) {
+func GetMediaInfo(fname string, outputType string) (MediaInfo, error) {
 	info := MediaInfoJson{}
 	mediaInfo := MediaInfo{}
 
@@ -129,7 +129,7 @@ func GetMediaInfo(fname string) (MediaInfo, error) {
 		return mediaInfo, err
 	}
 
-	for i, t := range info.Media.Track {
+	for _, t := range info.Media.Track {
 		if t.Type == "Video" {
 			mediaInfo.Video = append(mediaInfo.Video, t)
 		}
