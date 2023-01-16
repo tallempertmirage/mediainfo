@@ -112,7 +112,7 @@ func (info MediaInfo) IsMedia() bool {
 	return info.Video[0].Duration != "" && info.Audio[0].Duration != ""
 }
 
-func GetMediaInfo(fname string, outputType string) (MediaInfo, error) {
+func GetMediaInfo(fname string) (MediaInfo, error) {
 	info := MediaInfoJson{}
 	mediaInfo := MediaInfo{}
 
