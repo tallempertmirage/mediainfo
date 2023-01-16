@@ -16,7 +16,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"gitlab.com/mirage-dynamics/indexing/mediainfo"
+	"github.com/tallempertmirage/mediainfo"
 )
 
 func main() {
